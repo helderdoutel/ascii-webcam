@@ -18,7 +18,7 @@ def get_ascii(int_color):
         if int_color <= x:
             return color_dict[x]
 
-while rodando < 100:
+while rodando < 1000000:
     new_frame = []
     status, frame = camera.read()
     dim = (120, 60)
@@ -32,3 +32,5 @@ while rodando < 100:
     os.system('cls' if os.name == 'nt' else 'clear')
     for x in new_frame:
         print(x)
+
+    rodando += 1
