@@ -18,6 +18,7 @@ def get_ascii(int_color):
         if int_color <= x:
             return color_dict[x]
 
+rodando = 0
 while rodando < 1000000:
     new_frame = []
     status, frame = camera.read()
