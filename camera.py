@@ -26,10 +26,10 @@ while rodando < 1000000:
     frame = cv.resize(frame, dim, interpolation=cv.INTER_AREA)
 
     for i in frame:
-        new_line = []
+        new_line = ''
         for j in i:
-            new_line.append(sum(j)/3)
-        new_frame.append(''.join([get_ascii(x) for x in new_line]))
+            new_line += get_ascii(sum(j)/3)
+        new_frame.append(new_line)
     os.system('cls' if os.name == 'nt' else 'clear')
     for x in new_frame:
         print(x)
